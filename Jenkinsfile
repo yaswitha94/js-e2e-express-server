@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('vcs') {
             steps{
-                git url: 'https://github.com/yaswitha94/js-e2e-express-server.git'
+                git url: 'https://github.com/yaswitha94/js-e2e-express-server.git',
                 branch: 'main'
             }
         }
