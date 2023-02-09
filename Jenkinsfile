@@ -1,5 +1,5 @@
 pipeline{
-    agent { label 'openjdk-8' }
+    agent { label 'sonar' }
     stages{
         stage('vcs') {
             steps{
