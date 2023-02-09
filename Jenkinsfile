@@ -11,7 +11,9 @@ pipeline{
         stage('build') {
             steps{
                 sh 'npm install'
-                sh 'npm run build'
+                 withSonarQubeEnv('SONAR_SELF_HOSTED') {
+                    sh script: 'npm run build sonar-scanner'
+                }
             }
         }
     }
